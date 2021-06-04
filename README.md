@@ -10,6 +10,12 @@ un proyecto en donde replicaremos la aplicación para celular de Facebook, y
 justo encontré un tutorial en donde la replican. Entonces seguiré este tutorial,
 iré subiendo el código, y estaré aprendiendo.
 
+## FECHA EN QUE INICIÉ LA REPLICACIÓN
+
+Comencé a replicar el proyecto el día:
+
+> - Jueves, 3 de JUNIO del 2021
+
 ## ***REPOSITORIO DEL PROYECTO DEL TUTORIAL***
 
 El código del tutorial está en un repositorio. Ahí es donde tengo que tomar el
