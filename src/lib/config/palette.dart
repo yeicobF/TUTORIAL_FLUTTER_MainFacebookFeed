@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
 
+// Clase donde estarán los gradientes y colores en general a utilizar en la app.
+// La forma de acceder sería:
+//
+//  Palette.nombreVariable
+//
+// Ya que todas las variables son estáticas.
 class Palette {
   static const Color scaffold = Color(0xFFF0F2F5);
 

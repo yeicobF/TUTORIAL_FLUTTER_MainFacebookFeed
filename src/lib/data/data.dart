@@ -1,4 +1,7 @@
-import 'package:flutter_facebook_responsive_ui/models/models.dart';
+import '../models/models.dart';
+
+// CLASE EN DONDE SE ENCUENTRAN TODOS LOS ELEMENTOS INSTANCIADOS PARA UTILIZAR
+// EN LA APLICACIÓN y EJEMPLIFICAR DATOS REALES.
 
 final User currentUser = User(
   name: 'Marcus Ng',
