@@ -1,16 +1,37 @@
-/**
- * CLASE EN LA QUE SE MANEJARÁ LA PANTALLA INICIAL DE FACEBOOK.
- */
-
+/// CLASE EN LA QUE SE MANEJARÁ LA PANTALLA INICIAL DE FACEBOOK.
 import 'package:flutter/material.dart';
+// Cambiar colores de la "status bar" y la barra inferior con botones del
+// celular.
+import 'package:flutter_statusbarcolor/flutter_statusbarcolor.dart'
+    show FlutterStatusbarcolor;
+// Íconos de Font Awesome.
+import 'package:font_awesome_flutter/font_awesome_flutter.dart'
+    show FontAwesomeIcons;
+// ÍCONOS MATERIAL DESIGN.
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart'
+    show MdiIcons;
+
+// Colores
 import '../config/palette.dart';
+// Botones, ...
+import '../widgets/widgets.dart';
 
 class HomeScreen extends StatelessWidget {
+  // Colores del botón del SliverAppBar
+  final fbColors = {
+    "fbIconCircle": const Color(0xFFf1f2f6),
+    "fbIcon": const Color(0xFF010102),
+  };
 
   @override
   Widget build(BuildContext context) {
+    // CAMBIAR COLOR DEL statusBar
+    // https://stackoverflow.com/questions/52489458/how-to-change-status-bar-color-in-flutter
+    FlutterStatusbarcolor.setStatusBarColor(Colors.white);
+
     return Scaffold(
       body: CustomScrollView(
+        // slivers: Todo deben ser slivers, no solo contenedores.
         slivers: [
           // SliverAppBar:
           // - Scroll hacia abajo -> Se esconde la barra superior.
@@ -39,22 +60,29 @@ class HomeScreen extends StatelessWidget {
             // actions: Para hacer funcionar a los botones.
             actions: [
               // Para simular el círculo gris de alrededor.
-              Container(
-                margin: const EdgeInsets.all(6.0),
-                decoration: BoxDecoration(
-                  color: Colors.grey[300],
-                  shape: BoxShape.circle,
-                ),
-                child: IconButton(
-                  icon: const Icon(Icons.search),
-                  iconSize: 30.0,
-                  color: Colors.black,
-                  // Lo que se ejecutará cuando el botón sea presionado.
-                  onPressed: () {},
-                ),
-              )
+              CircleButton(
+                icon: Icons.search,
+                iconSize: 30.0,
+                // icon: FontAwesomeIcons.search,
+                // iconSize: 26.0,
+                onPressed: () => print("search"),
+              ),
+              CircleButton(
+                icon: MdiIcons.facebookMessenger,
+                iconSize: 30.0,
+                onPressed: () => print("Messenger"),
+              ),
             ],
           ),
+          // Los elementos requieren estar en un Sliver para poder estar dentro
+          // los "slivers" del CustomScrollView.
+          SliverToBoxAdapter(
+            // Contenedor debajo de la AppBar.
+            child: Container(
+              height: 100.0,
+              color: Colors.red,
+            ),
+          )
         ],
       ),
     );

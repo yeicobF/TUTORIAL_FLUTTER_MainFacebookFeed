@@ -28,6 +28,12 @@ dependencies:
   cupertino_icons: ^0.1.3
   flutter:
     sdk: flutter
+  # CAMBIAR COLOR DEL statusBar
+  # https://stackoverflow.com/questions/52489458/how-to-change-status-bar-color-in-flutter
+  flutter_statusbarcolor:
+  # Font Awesome para poder agregar íconos de Facebook, la lupa y así.
+  # https://pub.dev/packages/font_awesome_flutter
+  font_awesome_flutter: ^9.0.0
   lint: ^1.5.3
   material_design_icons_flutter: ^4.0.5345
 
