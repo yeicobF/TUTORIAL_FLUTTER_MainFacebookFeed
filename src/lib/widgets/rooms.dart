@@ -1,10 +1,10 @@
 /// Clase en donde  se mostrará la barra horizontal en donde se muestran los
 /// usuarios conectados.
-
 import 'package:flutter/material.dart';
 
 import '../config/palette.dart'; // Colores.
 import '../models/models.dart' show User; // Usuario, historias, ...
+import 'widgets.dart';
 
 class Rooms extends StatelessWidget {
   final List<User> onlineUsers;
@@ -18,7 +18,7 @@ class Rooms extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 60.0,
-      color: Colors.orange,
+      color: Colors.white,
       child: ListView.builder(
         padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 4.0),
         scrollDirection: Axis.horizontal,
@@ -34,12 +34,15 @@ class Rooms extends StatelessWidget {
               child: _CreateRoomButton(),
             );
           }
-
-          return Container(
-            margin: const EdgeInsets.all(2.0),
-            height: 20.0,
-            width: 20.0,
-            color: Colors.red,
+          // user: Usuario actual renderizado a partir del índice 1, ya que el 0
+          // es el botón de "Create Room".
+          final User user = onlineUsers[index - 1];
+          return Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 8.0),
+            child: ProfileAvatar(
+              imageUrl: user.imageUrl,
+              // isActive: true,
+            ),
           );
         },
       ),
@@ -65,7 +68,7 @@ class _CreateRoomButton extends StatelessWidget {
           width: 3.0,
           color: Colors.blueAccent[100],
         ),
-        backgroundColor: Colors.white,
+        // backgroundColor: Colors.white,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(30.0),
         ),
@@ -81,9 +84,13 @@ class _CreateRoomButton extends StatelessWidget {
               Icons.video_call,
               size: 35.0,
               // Esto cambia el color del gradiente para el ícono de la cámara.
-              color: Colors.red,
+              color: Colors.white,
             ),
-          )
+          ),
+          const SizedBox(
+            width: 4.0,
+          ),
+          const Text("Create\nRoom"),
         ],
       ),
     );

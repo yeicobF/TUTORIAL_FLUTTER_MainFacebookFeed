@@ -1,11 +1,10 @@
 // Crear contenedor para la parte superior en donde se encuentra la foto de
 // perfil, la posibilidad de publicar, y algunos otros botones.
 
-// cached_network_image/cached_network_image.dart
-// - Obtenemos una imagen de un URL de internet.
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+
 import '../models/models.dart';
+import 'widgets.dart';
 
 class CreatePostContainer extends StatelessWidget {
   final User currentUser; // Usuario actual.
@@ -28,13 +27,7 @@ class CreatePostContainer extends StatelessWidget {
           Row(
             children: [
               // Crea un avatar circular.
-              CircleAvatar(
-                radius: 20.0,
-                backgroundColor: Colors.grey[200],
-                // Imagen de fondo obtenida de un URL.
-                backgroundImage:
-                    CachedNetworkImageProvider(currentUser.imageUrl),
-              ),
+              ProfileAvatar(imageUrl: currentUser.imageUrl,),
               // Agregamos un espacio entre la foto de perfil y el texto.
               // const: No se vuelve a renderizar.
               const SizedBox(
