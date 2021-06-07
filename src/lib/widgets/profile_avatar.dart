@@ -34,29 +34,33 @@ class ProfileAvatar extends StatelessWidget {
           // Imagen de fondo obtenida de un URL.
           backgroundImage: CachedNetworkImageProvider(imageUrl),
         ),
-        // [Positioned] pone el widget en la posición indicada respecto al
-        // contenedor.
-        Positioned(
-          bottom: 0.0,
-          right: 0.0,
-          // [Container] es requerido para mostrar el círculo verde.
-          child: Container(
-            height: 15.0,
-            width: 15.0,
-            // [decoration] es requerido para hacer el circulo que indica la
-            // conexión.
-            decoration: BoxDecoration(
-              color: Palette.online,
-              shape: BoxShape.circle,
-              // [border: Border.all(...)] para mostrar el borde circular blanco
-              // alrededor del círculo verde que indica la conexión.
-              border: Border.all(
-                width: 2.0,
-                color: Colors.white,
-              ),
-            ),
-          ),
-        ),
+        // Si [isActive] == true, mostrar ícono verde indicando conexión.
+        // Si no es true, entonces poner un SizedBox del menor tamaño posible.
+        isActive
+            // [Positioned] pone el widget en la posición indicada respecto al
+            // contenedor.
+            ? Positioned(
+                bottom: 0.0,
+                right: 0.0,
+                // [Container] es requerido para mostrar el círculo verde.
+                child: Container(
+                  height: 15.0,
+                  width: 15.0,
+                  // [decoration] es requerido para hacer el circulo que indica la
+                  // conexión.
+                  decoration: BoxDecoration(
+                    color: Palette.online,
+                    shape: BoxShape.circle,
+                    // [border: Border.all(...)] para mostrar el borde circular blanco
+                    // alrededor del círculo verde que indica la conexión.
+                    border: Border.all(
+                      width: 2.0,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              )
+            : const SizedBox.shrink(),
       ],
     );
   }
