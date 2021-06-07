@@ -13,6 +13,8 @@ import 'package:material_design_icons_flutter/material_design_icons_flutter.dart
 
 // Colores
 import '../config/palette.dart';
+// Información predefinida de los usuarios.
+import '../data/data.dart';
 // Botones, ...
 import '../widgets/widgets.dart';
 
@@ -65,7 +67,7 @@ class HomeScreen extends StatelessWidget {
                 iconSize: 30.0,
                 // icon: FontAwesomeIcons.search,
                 // iconSize: 26.0,
-                onPressed: () => print("search"),
+                onPressed: () => print("Search"),
               ),
               CircleButton(
                 icon: MdiIcons.facebookMessenger,
@@ -78,11 +80,8 @@ class HomeScreen extends StatelessWidget {
           // los "slivers" del CustomScrollView.
           SliverToBoxAdapter(
             // Contenedor debajo de la AppBar.
-            child: Container(
-              height: 100.0,
-              color: Colors.red,
-            ),
-          )
+            child: CreatePostContainer(currentUser: currentUser),
+          ),
         ],
       ),
     );
