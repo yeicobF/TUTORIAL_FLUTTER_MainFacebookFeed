@@ -1,0 +1,13 @@
+# https://github.com/tadaspetra/todoapp/blob/master/todo_app/analysis_options.yaml
+# https://www.youtube.com/watch?v=aiTTClKJbnw&t=403s&ab_channel=freeCodeCamp.org
+
+# https://pub.dev/packages/lint
+
+include: package:lint/analysis_options.yaml
+
+linter:
+  rules:
+    # Preferir imports relativos a los absolutos
+    # https://dart-lang.github.io/linter/lints/prefer_relative_imports.html
+    # https://stackoverflow.com/questions/59693195/flutter-imports-relative-path-or-package
+    - prefer_relative_imports
