@@ -22,6 +22,14 @@ class Stories extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    /// Historia del usuario [index] (índice) actual.
+    ///
+    /// Inicializamos como la historia 0, ya que esta depende de una condición
+    /// más adelante, pero tiene que estar incializada.
+    /// 
+    /// Toma una historia de la lista de todas las historias de los usuarios.
+    Story story = stories[0];
+
     return Container(
       height: 200.0,
       color: Colors.purple,
@@ -37,34 +45,34 @@ class Stories extends StatelessWidget {
         /// + [stories.length] (Número de historias)
         itemCount: 1 + stories.length,
         itemBuilder: (BuildContext context, int index) {
-          // Si estamos en el índice 0, renderizar el contenedor de "Crear
-          // historias."
-          if (index == 0) {
-            return Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 4.0),
+          /// Si el índice [index] del [itemBuilder] > 0 -> Tomar la historia
+          /// del índice anterior.
+          if (index > 0) story = stories[index - 1];
 
-              /// Agregamos la tarjeta para crear una historia.
-              child: _StoryCard(
-                /// Indicamos que sí queremos indicar que es el elemento de
-                /// agregar una historia.
-                isAddStory: true,
-                currentUser: currentUser,
-              ),
-            );
-          }
-
-          /// Historia del usuario [index] (índice) actual.
-          final Story story = stories[index - 1];
-
-          /// Ahora sí se crean las historias.
           return Padding(
             padding: const EdgeInsets.symmetric(horizontal: 4.0),
 
             /// Agregamos la tarjeta para crear una historia.
-            child: _StoryCard(
-              /// Pasamos la historia actual para renderizarla.
-              story: story,
-            ),
+            child: index == 0
+
+                /// Si estamos en el índice [index] 0, renderizar el contenedor
+                /// de "Crear historias", el cual le pertenece al usuario actual
+                /// [currentUser].
+                ? _StoryCard(
+                    /// Indicamos que sí queremos indicar que es el elemento de
+                    /// agregar una historia.
+                    isAddStory: true,
+                    currentUser: currentUser,
+                  )
+
+                /// Ahora sí se crean las historias.
+                ///
+                /// Si estamos en el índice [index] > 0, mostramos la historia
+                /// actual.
+                : _StoryCard(
+                    /// Pasamos la historia actual para renderizarla.
+                    story: story,
+                  ),
           );
         },
       ),
