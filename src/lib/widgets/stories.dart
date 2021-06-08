@@ -1,5 +1,7 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_facebook_responsive_ui/models/models.dart';
+
+import '../models/models.dart';
 
 /// CLASE PARA CREAR LAS HISTORIAS.
 class Stories extends StatelessWidget {
@@ -8,7 +10,6 @@ class Stories extends StatelessWidget {
 
   /// Lista de las historias.
   final List<Story> stories;
-
   const Stories({
     Key key,
     @required this.currentUser,
@@ -99,6 +100,20 @@ class _StoryCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    /// Es un stack de elementos:
+    /// - Imagen de fondo
+    /// - Botón de adición
+    /// - Texto inferior
+    return Stack(
+      children: [
+        /// Imagen tomada de un URL de internet.
+        CachedNetworkImage(
+          /// Si [isAddStory] == true -> Se muestra la foto de perfil del
+          /// usuario actual.
+          /// Si [isAddStory] == false -> se muestra la historia como tal.
+          imageUrl: isAddStory ? currentUser.imageUrl
+        ),
+      ],
+    );
   }
 }

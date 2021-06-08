@@ -1,11 +1,13 @@
 import 'package:meta/meta.dart';
 import 'models.dart';
 
-// Clase para manejar las historias.
-
+/// Clase para manejar las historias.
 class Story {
+  /// Usuario de quien es la historia.
   final User user;
+  /// URL de la imagen de la historia.
   final String imageUrl;
+  /// Indicador de si ya se vio la historia o aún no.
   final bool isViewed;
 
   const Story({

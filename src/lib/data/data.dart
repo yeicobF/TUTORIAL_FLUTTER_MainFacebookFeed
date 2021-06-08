@@ -1,15 +1,18 @@
 import '../models/models.dart';
 
-// CLASE EN DONDE SE ENCUENTRAN TODOS LOS ELEMENTOS INSTANCIADOS PARA UTILIZAR
+// ARCHIVOCLASE EN DONDE SE ENCUENTRAN TODOS LOS ELEMENTOS INSTANCIADOS PARA
+// UTILIZAR
 // EN LA APLICACIÓN y EJEMPLIFICAR DATOS REALES.
 
-final User currentUser = User(
+/// Usuario actual que manejará la App.
+const User currentUser = User(
   name: 'Marcus Ng',
   imageUrl:
       'https://images.unsplash.com/photo-1578133671540-edad0b3d689e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80',
 );
 
-final List<User> onlineUsers = [
+/// Lista de usuarios conectados.
+const List<User> onlineUsers = [
   User(
     name: 'David Brooks',
     imageUrl:
@@ -110,6 +113,7 @@ final List<User> onlineUsers = [
   ),
 ];
 
+/// LISTA CON TODAS LAS HISTORIAS DE LOS USUARIOS.
 final List<Story> stories = [
   Story(
     user: onlineUsers[2],
@@ -167,8 +171,9 @@ final List<Story> stories = [
   ),
 ];
 
+/// Lista de todas las publicaciones de los usuarios.
 final List<Post> posts = [
-  Post(
+  const Post(
     user: currentUser,
     caption: 'Check out these cool puppers',
     timeAgo: '58m',
