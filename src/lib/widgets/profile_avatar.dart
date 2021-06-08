@@ -46,12 +46,13 @@ class ProfileAvatar extends StatelessWidget {
                 child: Container(
                   height: 15.0,
                   width: 15.0,
-                  // [decoration] es requerido para hacer el circulo que indica la
-                  // conexión.
+                  // [decoration] es requerido para hacer el circulo que indica
+                  // la conexión.
                   decoration: BoxDecoration(
                     color: Palette.online,
                     shape: BoxShape.circle,
-                    // [border: Border.all(...)] para mostrar el borde circular blanco
+                    // [border: Border.all(...)] para mostrar el borde circular
+                    // blanco
                     // alrededor del círculo verde que indica la conexión.
                     border: Border.all(
                       width: 2.0,

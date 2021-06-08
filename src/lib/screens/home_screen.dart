@@ -84,13 +84,27 @@ class HomeScreen extends StatelessWidget {
             child: CreatePostContainer(currentUser: currentUser),
           ),
           // Sliver con padding para estar separado de la parte superior.
+          // [Rooms] Lista de usuarios conectados.
           SliverPadding(
             padding: const EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 5.0),
             // Toma otro sliver, el cual ya teníamos definido.
             sliver: SliverToBoxAdapter(
+              // Lista de usuarios conectados.
               child: Rooms(onlineUsers: onlineUsers),
             ),
-          )
+          ),
+          // [Stories] Lista de las historias.
+          SliverPadding(
+            padding: const EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
+            // Toma otro sliver, el cual ya teníamos definido.
+            sliver: SliverToBoxAdapter(
+              // Lista de usuarios conectados.
+              child: Stories(
+                currentUser: currentUser,
+                stories: stories,
+              ),
+            ),
+          ),
         ],
       ),
     );

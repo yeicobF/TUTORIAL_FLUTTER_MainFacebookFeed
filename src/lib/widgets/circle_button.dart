@@ -24,6 +24,7 @@ class CircleButton extends StatelessWidget {
         shape: BoxShape.circle,
       ),
       child: IconButton(
+        splashRadius: iconSize,
         icon: Icon(icon),
         iconSize: iconSize,
         color: Colors.black,
