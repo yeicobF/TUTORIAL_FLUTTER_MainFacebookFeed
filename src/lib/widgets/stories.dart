@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../config/palette.dart' show Palette;
 import '../models/models.dart' show Story, User;
+import 'widgets.dart' show ProfileAvatar;
 
 /// Generador de historias.
 ///
@@ -149,6 +150,62 @@ class _StoryCard extends StatelessWidget {
             gradient: Palette.storyGradient,
             borderRadius: BorderRadius.circular(12.0),
           ),
+        ),
+
+        /// Ícono o foto de perfil de usuario en la parte superior izquierda.
+        ///
+        /// Si [isAddStory] == true -> Mostrar ícono de crear historia.
+        ///
+        /// Si [isAddStory] == false -> Mostrar la foto de perfil del usuario
+        /// que creó la historia.
+        Positioned(
+          top: 8.0,
+          left: 8.0,
+          child: isAddStory
+
+              /// Se muestra el botón para añadir nueva historia, ya que se
+              /// trata del espacio del usuario que está utilizando la App.
+              ? Container(
+                  height: 40.0,
+                  width: 40.0,
+                  decoration: const BoxDecoration(
+                    color: Colors.white,
+                    shape: BoxShape.circle,
+                  ),
+                  child: IconButton(
+                    padding: EdgeInsets.zero,
+                    icon: const Icon(Icons.add),
+                    iconSize: 30.0,
+                    color: Palette.facebookBlue,
+                    onPressed: () => print("Add to story"),
+                  ),
+                )
+
+              /// Se muestra la foto de perfil del usuario (amigo) que publicó
+              /// la historia.
+              /// 
+              /// La imagen muestra un círculo azul alrededor de la foto de
+              /// perfil.
+              : ProfileAvatar(
+                  imageUrl: story.user.imageUrl,
+                  /// En [hasBorder] mandamos el valor [story.isViewed], el
+                  /// cual indica si una historia ha sido vista o no.
+                  /// 
+                  /// Si la historia ya se vio ([story.isViewed] == true) -> No
+                  /// se dibujará el borde azul circular alrededor de la
+                  /// historia.
+                  /// 
+                  /// Si la historia no se ha visto ([story.isViewed] == false)
+                  /// -> se dibujará el borde azul alrededor de la foto de
+                  /// perfil.
+                  /// 
+                  /// ![story.isViewed] significa que si la historia se ha
+                  /// visto, no tiene borde:
+                  /// 
+                  /// -> ![story.isViewed] = true -> [hasBorder] = false.
+                  /// -> ![story.isViewed] = false -> [hasBorder] = true.
+                  hasBorder: !story.isViewed,
+                ),
         )
       ],
     );
