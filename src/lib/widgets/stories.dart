@@ -3,13 +3,17 @@ import 'package:flutter/material.dart';
 
 import '../models/models.dart';
 
-/// CLASE PARA CREAR LAS HISTORIAS.
+/// Generador de historias.
+///
+/// Recibe diversas historias que se renderizarán dependiendo de su información.
+/// Además, recibe al usuario actual.
 class Stories extends StatelessWidget {
   /// Usuario actual.
   final User currentUser;
 
   /// Lista de las historias.
   final List<Story> stories;
+
   const Stories({
     Key key,
     @required this.currentUser,
@@ -107,11 +111,21 @@ class _StoryCard extends StatelessWidget {
     return Stack(
       children: [
         /// Imagen tomada de un URL de internet.
-        CachedNetworkImage(
-          /// Si [isAddStory] == true -> Se muestra la foto de perfil del
-          /// usuario actual.
-          /// Si [isAddStory] == false -> se muestra la historia como tal.
-          imageUrl: isAddStory ? currentUser.imageUrl
+        ClipRRect(
+          borderRadius: BorderRadius.circular(12.0),
+          child: CachedNetworkImage(
+            /// Si [isAddStory] == true -> Se muestra la foto de perfil del
+            /// usuario actual como fondo del recuadro de la historia.
+            /// Si [isAddStory] == false -> Se muestra foto de la historia de
+            /// otro usuario.
+            imageUrl: isAddStory ? currentUser.imageUrl : story.imageUrl,
+
+            /// Toma TODA la altura del contenedor.
+            height: double.infinity,
+            width: 110.0,
+            // Que la imagen cubra todo el espacio disponible del contenedor.
+            fit: BoxFit.cover,
+          ),
         ),
       ],
     );

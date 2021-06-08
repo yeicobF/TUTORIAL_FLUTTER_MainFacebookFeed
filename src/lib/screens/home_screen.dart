@@ -78,15 +78,15 @@ class HomeScreen extends StatelessWidget {
           ),
           // Los elementos requieren estar en un Sliver para poder estar dentro
           // los "slivers" del CustomScrollView.
-          SliverToBoxAdapter(
+          const SliverToBoxAdapter(
             // Contenedor debajo de la AppBar.
             // Sección para crear una publicación.
             child: CreatePostContainer(currentUser: currentUser),
           ),
           // Sliver con padding para estar separado de la parte superior.
           // [Rooms] Lista de usuarios conectados.
-          SliverPadding(
-            padding: const EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 5.0),
+          const SliverPadding(
+            padding: EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 5.0),
             // Toma otro sliver, el cual ya teníamos definido.
             sliver: SliverToBoxAdapter(
               // Lista de usuarios conectados.

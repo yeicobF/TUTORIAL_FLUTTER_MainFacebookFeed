@@ -1,5 +1,5 @@
 import 'package:meta/meta.dart';
-import 'models.dart';
+import 'models.dart' show User;
 
 /// Clase para manejar las historias.
 class Story {

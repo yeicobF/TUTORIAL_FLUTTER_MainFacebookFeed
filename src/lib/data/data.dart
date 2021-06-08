@@ -1,4 +1,4 @@
-import '../models/models.dart';
+import '../models/models.dart' show Post, Story, User;
 
 // ARCHIVOCLASE EN DONDE SE ENCUENTRAN TODOS LOS ELEMENTOS INSTANCIADOS PARA
 // UTILIZAR
