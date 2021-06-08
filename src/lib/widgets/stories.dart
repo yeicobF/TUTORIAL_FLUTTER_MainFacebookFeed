@@ -34,7 +34,7 @@ class Stories extends StatelessWidget {
 
     return Container(
       height: 200.0,
-      color: Colors.purple,
+      color: Colors.white,
       child: ListView.builder(
         padding: const EdgeInsets.symmetric(
           horizontal: 10.0,
@@ -183,29 +183,57 @@ class _StoryCard extends StatelessWidget {
 
               /// Se muestra la foto de perfil del usuario (amigo) que publicó
               /// la historia.
-              /// 
+              ///
               /// La imagen muestra un círculo azul alrededor de la foto de
               /// perfil.
               : ProfileAvatar(
                   imageUrl: story.user.imageUrl,
+
                   /// En [hasBorder] mandamos el valor [story.isViewed], el
                   /// cual indica si una historia ha sido vista o no.
-                  /// 
+                  ///
                   /// Si la historia ya se vio ([story.isViewed] == true) -> No
                   /// se dibujará el borde azul circular alrededor de la
                   /// historia.
-                  /// 
+                  ///
                   /// Si la historia no se ha visto ([story.isViewed] == false)
                   /// -> se dibujará el borde azul alrededor de la foto de
                   /// perfil.
-                  /// 
+                  ///
                   /// ![story.isViewed] significa que si la historia se ha
                   /// visto, no tiene borde:
-                  /// 
+                  ///
                   /// -> ![story.isViewed] = true -> [hasBorder] = false.
                   /// -> ![story.isViewed] = false -> [hasBorder] = true.
                   hasBorder: !story.isViewed,
                 ),
+        ),
+
+        /// TEXTO INFERIOR CON NOMBRE DEL USUARIO o "Add to story"
+        Positioned(
+          bottom: 8.0,
+          left: 8.0,
+          right: 8.0,
+
+          /// Si [isAddToStory] == true -> Mostrar texto de añadir historia.
+          ///
+          /// Si [isAddToStory] == false -> Mostrar nombre de usuario.
+          child: Text(
+            isAddStory ? "Add to Story" : story.user.name,
+
+            /// Número máximo de líneas para mostrar el texto.
+            maxLines: 2,
+
+            /// Comportamiento si el texto excede [maxLines].
+            ///
+            /// [overflow: TextOverflow.ellipsis] -> Se muestran 3 puntos si
+            /// hay overflow.
+            overflow: TextOverflow.ellipsis,
+            style: const TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
         )
       ],
     );

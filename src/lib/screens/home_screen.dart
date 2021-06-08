@@ -27,10 +27,10 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // CAMBIAR COLOR DEL statusBar
+    // CAMBIAR COLOR DEL statusBar (barra superior de notificaciones).
     // https://stackoverflow.com/questions/52489458/how-to-change-status-bar-color-in-flutter
     FlutterStatusbarcolor.setStatusBarColor(Colors.white);
-    // Íconos de la barra superior de color negro.
+    // Íconos de la barra superior de notificaciones de color negro.
     FlutterStatusbarcolor.setStatusBarWhiteForeground(false);
 
     return Scaffold(
