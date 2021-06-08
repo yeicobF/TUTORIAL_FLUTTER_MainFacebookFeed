@@ -1,7 +1,8 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
-import '../models/models.dart';
+import '../config/palette.dart' show Palette;
+import '../models/models.dart' show Story, User;
 
 /// Generador de historias.
 ///
@@ -26,7 +27,7 @@ class Stories extends StatelessWidget {
     ///
     /// Inicializamos como la historia 0, ya que esta depende de una condición
     /// más adelante, pero tiene que estar incializada.
-    /// 
+    ///
     /// Toma una historia de la lista de todas las historias de los usuarios.
     Story story = stories[0];
 
@@ -135,6 +136,20 @@ class _StoryCard extends StatelessWidget {
             fit: BoxFit.cover,
           ),
         ),
+
+        /// Degradado para que el texto inferior sea más legible. Va de más
+        /// oscuro desde abajo y claro arriba.
+        Container(
+          /// Altura máxima del contenedor.
+          height: double.infinity,
+          width: 110.0,
+
+          /// [decoration] es el degradado. Se hace más oscura la imagen.
+          decoration: BoxDecoration(
+            gradient: Palette.storyGradient,
+            borderRadius: BorderRadius.circular(12.0),
+          ),
+        )
       ],
     );
   }
