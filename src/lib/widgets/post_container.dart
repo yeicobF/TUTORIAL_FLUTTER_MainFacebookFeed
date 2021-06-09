@@ -1,8 +1,9 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
+import '../config/palette.dart' show Palette;
 import '../models/models.dart' show Post;
-import 'widgets.dart';
+import 'widgets.dart' show ProfileAvatar;
 
 /// Manejador de publicaciones de usuarios.
 ///
@@ -89,6 +90,16 @@ class PostContainer extends StatelessWidget {
               // Si no hay imagen, poner un widget sin tamaño (por decirlo de
               // alguna forma).
               : const SizedBox.shrink(),
+
+          /// Post Feed
+          ///
+          /// Datos del post: Número de likes, comentarios, ...
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 12.0),
+
+            /// Estadísticas de la publicación.
+            child: _PostStats(post: post),
+          )
         ],
       ),
     );
@@ -101,6 +112,10 @@ class PostContainer extends StatelessWidget {
 /// - Column(Nombre + hace cuánto tiempo se creó la publicación)
 /// - Ícono de más
 class _PostHeader extends StatelessWidget {
+  /// Publicacion que se mostrará.
+  ///
+  /// Se requiere este atributo para poder acceder a los datos de la
+  /// publicación.
   final Post post;
 
   const _PostHeader({
@@ -162,8 +177,76 @@ class _PostHeader extends StatelessWidget {
         /// Ícono de más.
         IconButton(
           icon: const Icon(Icons.more_horiz),
+          splashRadius: 1.0,
           onPressed: () => print("More"),
         ),
+      ],
+    );
+  }
+}
+
+/// Estadísticas de la publicación.
+///
+/// Se muestra:
+/// - Likes
+/// - Número de comentarios
+/// - Número de veces compartidas
+class _PostStats extends StatelessWidget {
+  final Post post;
+
+  const _PostStats({
+    Key key,
+    @required this.post,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Row(
+          children: [
+            Container(
+              padding: const EdgeInsets.all(4.0),
+              decoration: const BoxDecoration(
+                color: Palette.facebookBlue,
+                shape: BoxShape.circle,
+              ),
+              child: const Icon(
+                Icons.thumb_up,
+                size: 10.0,
+                color: Colors.white,
+              ),
+            ),
+            const SizedBox(width: 4.0),
+            Expanded(
+              /// Likes
+              child: Text(
+                "${post.likes}",
+                style: TextStyle(
+                  color: Colors.grey[600],
+                ),
+              ),
+            ),
+            const SizedBox(width: 4.0),
+
+            /// Comentarios
+            Text(
+              "${post.comments} Comments",
+              style: TextStyle(
+                color: Colors.grey[600],
+              ),
+            ),
+            const SizedBox(width: 4.0),
+
+            /// Compartidas
+            Text(
+              "${post.shares} Shares",
+              style: TextStyle(
+                color: Colors.grey[600],
+              ),
+            ),
+          ],
+        )
       ],
     );
   }
