@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 import '../config/palette.dart' show Palette;
 import '../models/models.dart' show Post;
@@ -246,8 +247,92 @@ class _PostStats extends StatelessWidget {
               ),
             ),
           ],
+        ),
+        const Divider(),
+
+        /// Botones de la parte inferior de la publicación.
+        Row(
+          children: [
+            /// Botón de like.
+            _PostButton(
+              icon: Icon(
+                MdiIcons.thumbUpOutline,
+                color: Colors.grey[600],
+                size: 20.0,
+              ),
+              label: "Like",
+              onTap: () => print("Like"),
+            ),
+            _PostButton(
+              icon: Icon(
+                MdiIcons.commentOutline,
+                color: Colors.grey[600],
+                size: 20.0,
+              ),
+              label: "Comment",
+              onTap: () => print("Comment"),
+            ),
+            _PostButton(
+              icon: Icon(
+                MdiIcons.shareOutline,
+                color: Colors.grey[600],
+                size: 25.0,
+              ),
+              label: "Share",
+              onTap: () => print("Share"),
+            ),
+          ],
         )
       ],
+    );
+  }
+}
+
+/// Generador de botón.
+class _PostButton extends StatelessWidget {
+  /// Ícono del botón ya creado.
+  final Icon icon;
+
+  /// Texto del botón.
+  final String label;
+
+  /// Función a ejecutar al tocar el botón.
+  final void Function() onTap;
+
+  const _PostButton({
+    Key key,
+    @required this.icon,
+    @required this.label,
+    @required this.onTap,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    /// [Material] permite el efecto de la tinta - ink effect.
+    return Expanded(
+      child: Material(
+        color: Colors.white,
+
+        /// [InkWell] da un buen efecto como de "tinta" a los botones.
+        child: InkWell(
+          onTap: onTap,
+          child: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 12.0),
+            height: 25.0,
+
+            /// Fila con el ícono + texto.
+            child: Row(
+              // Centrar botón.
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                icon,
+                const SizedBox(width: 4.0),
+                Text(label),
+              ],
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
