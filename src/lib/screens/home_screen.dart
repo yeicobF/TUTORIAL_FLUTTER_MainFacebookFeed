@@ -1,5 +1,6 @@
 /// CLASE EN LA QUE SE MANEJARÁ LA PANTALLA INICIAL DE FACEBOOK.
 import 'package:flutter/material.dart';
+import 'package:flutter_facebook_responsive_ui/models/models.dart';
 // Cambiar colores de la "status bar" y la barra inferior con botones del
 // celular.
 import 'package:flutter_statusbarcolor/flutter_statusbarcolor.dart'
@@ -11,15 +12,17 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart'
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart'
     show MdiIcons;
 
-// Colores
+/// Colores
 import '../config/palette.dart';
-// Información predefinida de los usuarios.
+
+/// Información predefinida de los usuarios.
 import '../data/data.dart';
-// Botones, ...
+
+/// Botones, ...
 import '../widgets/widgets.dart';
 
 class HomeScreen extends StatelessWidget {
-  // Colores del botón del SliverAppBar
+  /// Colores del botón del SliverAppBar
   final fbColors = {
     "fbIconCircle": const Color(0xFFf1f2f6),
     "fbIcon": const Color(0xFF010102),
@@ -95,16 +98,40 @@ class HomeScreen extends StatelessWidget {
               child: Rooms(onlineUsers: onlineUsers),
             ),
           ),
-          // [Stories] Lista de las historias.
+
+          /// Lista con todas las historias.
           SliverPadding(
             padding: const EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
             // Toma otro sliver, el cual ya teníamos definido.
             sliver: SliverToBoxAdapter(
-              // Lista de usuarios conectados.
+              /// [Stories] Lista de las historias.
               child: Stories(
                 currentUser: currentUser,
                 stories: stories,
               ),
+            ),
+          ),
+
+          /// Publicaciones de los usuarios.
+          SliverList(
+            /// [delegate] - {SliverChildDelegate delegate}
+            /// Creates a sliver that places box children in a
+            /// linear array.
+            ///
+            /// [SliverChildBuilderDelegate] es como un equivalente al
+            /// [ListView.builder()].
+            delegate: SliverChildBuilderDelegate(
+              /// Función para renderizar todas las publicaciones.
+              (BuildContext context, int index) {
+                /// Publicación respecto al índice actual.
+                final Post post = posts[index];
+
+                /// Renderizar el post actual.
+                return PostContainer(post: post);
+              },
+
+              /// Número de elementos a mostrar.
+              childCount: posts.length,
             ),
           ),
         ],
