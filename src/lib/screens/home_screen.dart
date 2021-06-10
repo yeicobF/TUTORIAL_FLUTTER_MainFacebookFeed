@@ -22,7 +22,7 @@ import '../data/data.dart';
 import '../widgets/widgets.dart';
 
 class HomeScreen extends StatelessWidget {
-  /// Colores del botón del SliverAppBar
+  /// Colores del botón del SliverAppBar.
   final fbColors = {
     "fbIconCircle": const Color(0xFFf1f2f6),
     "fbIcon": const Color(0xFF010102),
@@ -30,31 +30,34 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // CAMBIAR COLOR DEL statusBar (barra superior de notificaciones).
-    // https://stackoverflow.com/questions/52489458/how-to-change-status-bar-color-in-flutter
+    /// CAMBIAR COLOR DEL statusBar (barra superior de notificaciones).
+    /// https://stackoverflow.com/questions/52489458/how-to-change-status-bar-color-in-flutter
     FlutterStatusbarcolor.setStatusBarColor(Colors.white);
-    // Íconos de la barra superior de notificaciones de color negro.
+
+    /// Íconos de la barra superior de notificaciones de color negro.
     FlutterStatusbarcolor.setStatusBarWhiteForeground(false);
 
     return Scaffold(
       body: CustomScrollView(
-        // slivers: Todo deben ser slivers, no solo contenedores.
+        /// [slivers]: Todo deben ser slivers, no solo contenedores.
         slivers: [
-          // SliverAppBar:
-          // - Scroll hacia abajo -> Se esconde la barra superior.
-          // - Scroll hacia arriba -> Se muestra la barra superior.
+          /// [SliverAppBar]:
+          /// - Scroll hacia abajo -> Se esconde la barra superior.
+          /// - Scroll hacia arriba -> Se muestra la barra superior.
           SliverAppBar(
             // Se cambian los colores de los elementos de la barra de
             // notificaciones.
             brightness: Brightness.light,
             backgroundColor: Colors.white,
             centerTitle: false,
-            // Para no tener que hacer scroll hasta arriba para que se vea la
-            // AppBar.
+
+            /// Para no tener que hacer scroll hasta arriba para que se vea la
+            /// [AppBar].
             floating: true,
             backwardsCompatibility: true,
-            // Para que se vea una sombra debajo de la AppBar.
-            // forceElevated: true,
+
+            /// Para que se vea una sombra debajo de la [AppBar].
+            /// [forceElevated]: true,
             title: const Text(
               "facebook",
               style: TextStyle(
@@ -64,9 +67,10 @@ class HomeScreen extends StatelessWidget {
                 letterSpacing: -1.2,
               ),
             ),
-            // actions: Para hacer funcionar a los botones.
+
+            /// [actions]: Para hacer funcionar a los botones.
             actions: [
-              // Para simular el círculo gris de alrededor.
+              /// Para simular el círculo gris de alrededor del ícono.
               CircleButton(
                 icon: Icons.search,
                 iconSize: 30.0,
@@ -81,15 +85,17 @@ class HomeScreen extends StatelessWidget {
               ),
             ],
           ),
-          // Los elementos requieren estar en un Sliver para poder estar dentro
-          // los "slivers" del CustomScrollView.
+
+          /// Los elementos requieren estar en un [Sliver] para poder estar
+          /// dentro los "[slivers]" del [CustomScrollView].
           const SliverToBoxAdapter(
             // Contenedor debajo de la AppBar.
             // Sección para crear una publicación.
             child: CreatePostContainer(currentUser: currentUser),
           ),
-          // Sliver con padding para estar separado de la parte superior.
-          // [Rooms] Lista de usuarios conectados.
+
+          /// [Sliver] con [Padding] para estar separado de la parte superior.
+          /// [Rooms] Lista de usuarios conectados.
           const SliverPadding(
             padding: EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 5.0),
             // Toma otro sliver, el cual ya teníamos definido.
@@ -130,7 +136,7 @@ class HomeScreen extends StatelessWidget {
                 return PostContainer(post: post);
               },
 
-              /// Número de elementos a mostrar.
+              /// [childCount]: Número de elementos a mostrar.
               childCount: posts.length,
             ),
           ),

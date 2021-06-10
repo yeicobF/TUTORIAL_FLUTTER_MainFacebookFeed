@@ -6,8 +6,10 @@ import 'package:flutter/material.dart';
 import '../models/models.dart';
 import 'widgets.dart';
 
+/// Contenedor para poder crear publicaciones.
 class CreatePostContainer extends StatelessWidget {
-  final User currentUser; // Usuario actual.
+  /// Usuario actual.
+  final User currentUser;
 
   const CreatePostContainer({
     Key key,
@@ -17,8 +19,8 @@ class CreatePostContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      // EdgeInsets.fromLTRB(12.0, 8.0, 12.0, 0.0)
-      // - fromLTRB: Left, Top, Right, Bottom.
+      /// [EdgeInsets.fromLTRB(12.0, 8.0, 12.0, 0.0)]
+      /// - [fromLTRB]: Left, Top, Right, Bottom.
       padding: const EdgeInsets.fromLTRB(12.0, 8.0, 12.0, 0.0),
       // height: 100.0,
       color: Colors.white,
@@ -26,20 +28,24 @@ class CreatePostContainer extends StatelessWidget {
         children: [
           Row(
             children: [
-              // Crea un avatar circular.
-              ProfileAvatar(imageUrl: currentUser.imageUrl,),
-              // Agregamos un espacio entre la foto de perfil y el texto.
-              // const: No se vuelve a renderizar.
+              /// [ProfileAvatar]: Crea un avatar circular.
+              ProfileAvatar(
+                imageUrl: currentUser.imageUrl,
+              ),
+
+              /// Agregamos un espacio entre la foto de perfil y el texto.
+              /// [const]: No se vuelve a renderizar.
               const SizedBox(
                 width: 8.0,
               ),
-              // Que tome todo el espacio disponible.
+
+              /// [Expanded]: Que tome todo el espacio disponible.
               const Expanded(
-                // Campo de texto.
+                /// [TextField] Campo de texto.
                 child: TextField(
-                  // Decoración del input del TextField.
-                  // InputDecoration.collapsed: InputDecoration del mismo tamaño
-                  //  que el InputField.
+                  /// Decoración del input del [TextField].
+                  /// [InputDecoration.collapsed]: [InputDecoration] del mismo
+                  /// tamaño que el [InputField].
                   decoration: InputDecoration.collapsed(
                     hintText: "What's on your mind?",
                   ),
@@ -75,9 +81,7 @@ class CreatePostContainer extends StatelessWidget {
                 ),
                 // VerticalDivider: Dividor vertical que no se ve, solo pone un
                 // espacio entre los elementos.
-                const VerticalDivider(
-                  width: 8.0,
-                ),
+                const VerticalDivider(width: 8.0),
                 TextButton.icon(
                   onPressed: () => print("Photo"),
                   icon: const Icon(
@@ -89,9 +93,7 @@ class CreatePostContainer extends StatelessWidget {
                     style: TextStyle(color: Colors.black),
                   ),
                 ),
-                const VerticalDivider(
-                  width: 8.0,
-                ),
+                const VerticalDivider(width: 8.0),
                 TextButton.icon(
                   onPressed: () => print("Room"),
                   icon: const Icon(
@@ -105,7 +107,7 @@ class CreatePostContainer extends StatelessWidget {
                 ),
               ],
             ),
-          )
+          ),
         ],
       ),
     );
