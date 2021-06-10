@@ -1,25 +1,20 @@
 /// CLASE EN LA QUE SE MANEJARÁ LA PANTALLA INICIAL DE FACEBOOK.
 import 'package:flutter/material.dart';
-import 'package:flutter_facebook_responsive_ui/models/models.dart';
 // Cambiar colores de la "status bar" y la barra inferior con botones del
 // celular.
 import 'package:flutter_statusbarcolor/flutter_statusbarcolor.dart'
     show FlutterStatusbarcolor;
-// Íconos de Font Awesome.
-import 'package:font_awesome_flutter/font_awesome_flutter.dart'
-    show FontAwesomeIcons;
 // ÍCONOS MATERIAL DESIGN.
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart'
     show MdiIcons;
 
 /// Colores
-import '../config/palette.dart';
-
+import '../config/palette.dart' show Palette;
 /// Información predefinida de los usuarios.
-import '../data/data.dart';
-
+import '../data/data.dart' show currentUser, onlineUsers, posts, stories;
+import '../models/models.dart' show Post;
 /// Botones, ...
-import '../widgets/widgets.dart';
+import '../widgets/widgets.dart' show CircleButton, CreatePostContainer, PostContainer, Rooms, Stories;
 
 class HomeScreen extends StatelessWidget {
   /// Colores del botón del SliverAppBar.

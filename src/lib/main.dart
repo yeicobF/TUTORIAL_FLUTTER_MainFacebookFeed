@@ -10,6 +10,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Facebook UI',
+
+      /// [debugShowCheckedModeBanner]: Decidir si dejar o quitar la etiqueta de "Debug" al renderizar la app.
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -17,7 +19,8 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Palette.scaffold,
       ),
       home: SafeArea(
-        child: HomeScreen(),
+        /// Pantallas de navegación.
+        child: NavScreen(),
       ),
     );
   }
