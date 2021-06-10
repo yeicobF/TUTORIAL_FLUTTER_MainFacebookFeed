@@ -3,9 +3,7 @@ import 'config/palette.dart';
 // TODAS LAS PANTALLAS QUE SE EXPORTAN DESDE  ESE ARCHIVO.
 import 'screens/screens.dart';
 
-void main() {
-  runApp(MyApp());
-}
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   @override
