@@ -82,6 +82,10 @@ class CustomTabBar extends StatelessWidget {
               Tab(
                 icon: Icon(
                   currentIconInMap,
+                  size: 30.0,
+
+                  /// Si el ícono actual es el mismo índice que el de la
+                  /// pestaña seleccionada, entonces ponerle un color azul.
                   color: iconIndex == selectedIndex
                       ? Palette.facebookBlue
                       : Colors.black45,

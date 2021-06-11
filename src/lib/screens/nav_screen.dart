@@ -61,7 +61,35 @@ class _NavScreenState extends State<NavScreen> {
       length: _icons.length,
       child: Scaffold(
         /// [_screens[_selectedIndex]: Número de pantalla seleccionada.
-        body: _screens[_selectedIndex],
+        /// -> Esto no debería de estar así. body: _screens[_selectedIndex],
+
+        /// [body]: [TabBarView] son los elementos que se verán al seleccionar
+        /// la [TabBar], por lo que se pasa como [children] nuestra lista de
+        /// pantallas ([_screens]).
+        ///
+        /// - En web pueden generar problemas de rendimiento. Además, no se
+        /// guarda el estado de la pestaña anterior.
+        ///
+        ///body: TabBarView(
+        ///  /// "[physics]: const [NeverScrollableScrollPhysics()]"
+        ///  /// Esto significa que no se permitirá hacer un scroll entre las
+        ///  /// pantallas. Se tomó esta decisión porque el índice no se
+        ///  /// actualizaba correctamente al hacer scroll entre las pantallas.
+        ///  physics: const NeverScrollableScrollPhysics(),
+        ///  children: _screens,
+        ///),
+
+        /// [IndexedStack]
+        /// Esta es una mejor alternativa, ya que tiene un  mejor rendimiento,
+        /// y guarda la posición del scroll de todas las pestañas, no se
+        /// reinicia.
+        body: IndexedStack(
+          /// Su índice es el índice de la selección.
+          index: _selectedIndex,
+
+          /// Pantallas de la app.
+          children: _screens,
+        ),
 
         /// [bottomNavigationBar]: Barra inferior de navegación.
         bottomNavigationBar: CustomTabBar(

@@ -18,6 +18,9 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
         scaffoldBackgroundColor: Palette.scaffold,
       ),
+
+      /// Ponemos las pantallas dentro de un [SafeArea] para que no ocupe el
+      /// espacio de la barra de navegación ni la de notificaciones del celular.
       home: SafeArea(
         /// Pantallas de navegación.
         child: NavScreen(),
