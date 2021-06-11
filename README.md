@@ -31,23 +31,23 @@ Comencé a replicar el proyecto el día:
 | ![Pantalla final #13] | ![Pantalla final #14] | ![Pantalla final #15] |
 | ![Pantalla final #16] | ![Pantalla final #17] | ![Pantalla final #18] |
 
-[Pantalla final #1]: <VISUAL_PROGRESS/Pixel%203%20-%20Android%2011/RESULTADO%20FINAL/1.png> "Pantalla> final #1"
+[Pantalla final #1]: <VISUAL_PROGRESS/Pixel%203%20-%20Android%2011/RESULTADO%20FINAL/1.png> "Pantalla final #1"
 
-[Pantalla final #2]: <VISUAL_PROGRESS/Pixel%203%20-%20Android%2011/RESULTADO%20FINAL/2.png> "Pantalla> final #1"
+[Pantalla final #2]: <VISUAL_PROGRESS/Pixel%203%20-%20Android%2011/RESULTADO%20FINAL/2.png> "Pantalla final #1"
 
-[Pantalla final #3]: <VISUAL_PROGRESS/Pixel%203%20-%20Android%2011/RESULTADO%20FINAL/3.png> "Pantalla> final #3"
+[Pantalla final #3]: <VISUAL_PROGRESS/Pixel%203%20-%20Android%2011/RESULTADO%20FINAL/3.png> "Pantalla final #3"
 
-[Pantalla final #4]: <VISUAL_PROGRESS/Pixel%203%20-%20Android%2011/RESULTADO%20FINAL/4.png> "Pantalla> final #4"
+[Pantalla final #4]: <VISUAL_PROGRESS/Pixel%203%20-%20Android%2011/RESULTADO%20FINAL/4.png> "Pantalla final #4"
 
-[Pantalla final #5]: <VISUAL_PROGRESS/Pixel%203%20-%20Android%2011/RESULTADO%20FINAL/5.png> "Pantalla> final #5"
+[Pantalla final #5]: <VISUAL_PROGRESS/Pixel%203%20-%20Android%2011/RESULTADO%20FINAL/5.png> "Pantalla final #5"
 
-[Pantalla final #6]: <VISUAL_PROGRESS/Pixel%203%20-%20Android%2011/RESULTADO%20FINAL/6.png> "Pantalla> final #6"
+[Pantalla final #6]: <VISUAL_PROGRESS/Pixel%203%20-%20Android%2011/RESULTADO%20FINAL/6.png> "Pantalla final #6"
 
-[Pantalla final #7]: <VISUAL_PROGRESS/Pixel%203%20-%20Android%2011/RESULTADO%20FINAL/7.png> "Pantalla> final #7"
+[Pantalla final #7]: <VISUAL_PROGRESS/Pixel%203%20-%20Android%2011/RESULTADO%20FINAL/7.png> "Pantalla final #7"
 
-[Pantalla final #8]: <VISUAL_PROGRESS/Pixel%203%20-%20Android%2011/RESULTADO%20FINAL/8.png> "Pantalla> final #8"
+[Pantalla final #8]: <VISUAL_PROGRESS/Pixel%203%20-%20Android%2011/RESULTADO%20FINAL/8.png> "Pantalla final #8"
 
-[Pantalla final #9]: <VISUAL_PROGRESS/Pixel%203%20-%20Android%2011/RESULTADO%20FINAL/9.png> "Pantalla> final #9"
+[Pantalla final #9]: <VISUAL_PROGRESS/Pixel%203%20-%20Android%2011/RESULTADO%20FINAL/9.png> "Pantalla final #9"
 
 [Pantalla final #10]: <VISUAL_PROGRESS/Pixel%203%20-%20Android%2011/RESULTADO%20FINAL/10.png> "Pantalla final #10"
 
