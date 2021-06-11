@@ -1,4 +1,3 @@
-/// CLASE EN LA QUE SE MANEJARÁ LA PANTALLA INICIAL DE FACEBOOK.
 import 'package:flutter/material.dart';
 // Cambiar colores de la "status bar" y la barra inferior con botones del
 // celular.
@@ -16,6 +15,7 @@ import '../models/models.dart' show Post;
 /// Botones, ...
 import '../widgets/widgets.dart' show CircleButton, CreatePostContainer, PostContainer, Rooms, Stories;
 
+/// CLASE EN LA QUE SE MANEJARÁ LA PANTALLA INICIAL DE FACEBOOK.
 class HomeScreen extends StatelessWidget {
   /// Colores del botón del SliverAppBar.
   final fbColors = {

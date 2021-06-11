@@ -1,12 +1,13 @@
-/// Clase en donde  se mostrará la barra horizontal en donde se muestran los
-/// usuarios conectados.
 import 'package:flutter/material.dart';
 
 import '../config/palette.dart'; // Colores.
 import '../models/models.dart' show User; // Usuario, historias, ...
 import 'widgets.dart';
 
+/// Clase en donde  se mostrará la barra horizontal en donde se muestran los
+/// usuarios conectados.
 class Rooms extends StatelessWidget {
+  /// Usuarios conectados.
   final List<User> onlineUsers;
 
   const Rooms({
