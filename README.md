@@ -22,41 +22,50 @@ Comencé a replicar el proyecto el día:
 
 ## RESULTADOS FINALES
 
-![Pantalla final #1](VISUAL_PROGRESS/Pixel%203%20-%20Android%2011/RESULTADO%20FINAL/1.png "Pantalla final #1")
+| COLUMNA 1 | COLUMNA 2 | COLUMNA 3 |
+| :-------: | :-------: | :-------: |
+| ![Pantalla final #1] | ![Pantalla final #2] | ![Pantalla final #3] |
+| ![Pantalla final #4] | ![Pantalla final #5] | ![Pantalla final #6] |
+| ![Pantalla final #7] | ![Pantalla final #8] | ![Pantalla final #9] |
+| ![Pantalla final #10] | ![Pantalla final #11] | ![Pantalla final #12] |
+| ![Pantalla final #13] | ![Pantalla final #14] | ![Pantalla final #15] |
+| ![Pantalla final #16] | ![Pantalla final #17] | ![Pantalla final #18] |
 
-![Pantalla final #2](VISUAL_PROGRESS/Pixel%203%20-%20Android%2011/RESULTADO%20FINAL/2.png "Pantalla final #1")
+[Pantalla final #1]: <VISUAL_PROGRESS/Pixel%203%20-%20Android%2011/RESULTADO%20FINAL/1.png> "Pantalla> final #1"
 
-![Pantalla final #3](VISUAL_PROGRESS/Pixel%203%20-%20Android%2011/RESULTADO%20FINAL/3.png "Pantalla final #3")
+[Pantalla final #2]: <VISUAL_PROGRESS/Pixel%203%20-%20Android%2011/RESULTADO%20FINAL/2.png> "Pantalla> final #1"
 
-![Pantalla final #4](VISUAL_PROGRESS/Pixel%203%20-%20Android%2011/RESULTADO%20FINAL/4.png "Pantalla final #4")
+[Pantalla final #3]: <VISUAL_PROGRESS/Pixel%203%20-%20Android%2011/RESULTADO%20FINAL/3.png> "Pantalla> final #3"
 
-![Pantalla final #5](VISUAL_PROGRESS/Pixel%203%20-%20Android%2011/RESULTADO%20FINAL/5.png "Pantalla final #5")
+[Pantalla final #4]: <VISUAL_PROGRESS/Pixel%203%20-%20Android%2011/RESULTADO%20FINAL/4.png> "Pantalla> final #4"
 
-![Pantalla final #6](VISUAL_PROGRESS/Pixel%203%20-%20Android%2011/RESULTADO%20FINAL/6.png "Pantalla final #6")
+[Pantalla final #5]: <VISUAL_PROGRESS/Pixel%203%20-%20Android%2011/RESULTADO%20FINAL/5.png> "Pantalla> final #5"
 
-![Pantalla final #7](VISUAL_PROGRESS/Pixel%203%20-%20Android%2011/RESULTADO%20FINAL/7.png "Pantalla final #7")
+[Pantalla final #6]: <VISUAL_PROGRESS/Pixel%203%20-%20Android%2011/RESULTADO%20FINAL/6.png> "Pantalla> final #6"
 
-![Pantalla final #8](VISUAL_PROGRESS/Pixel%203%20-%20Android%2011/RESULTADO%20FINAL/8.png "Pantalla final #8")
+[Pantalla final #7]: <VISUAL_PROGRESS/Pixel%203%20-%20Android%2011/RESULTADO%20FINAL/7.png> "Pantalla> final #7"
 
-![Pantalla final #9](VISUAL_PROGRESS/Pixel%203%20-%20Android%2011/RESULTADO%20FINAL/9.png "Pantalla final #9")
+[Pantalla final #8]: <VISUAL_PROGRESS/Pixel%203%20-%20Android%2011/RESULTADO%20FINAL/8.png> "Pantalla> final #8"
 
-![Pantalla final #10](VISUAL_PROGRESS/Pixel%203%20-%20Android%2011/RESULTADO%20FINAL/10.png "Pantalla final #10")
+[Pantalla final #9]: <VISUAL_PROGRESS/Pixel%203%20-%20Android%2011/RESULTADO%20FINAL/9.png> "Pantalla> final #9"
 
-![Pantalla final #11](VISUAL_PROGRESS/Pixel%203%20-%20Android%2011/RESULTADO%20FINAL/11.png "Pantalla final #11")
+[Pantalla final #10]: <VISUAL_PROGRESS/Pixel%203%20-%20Android%2011/RESULTADO%20FINAL/10.png> "Pantalla final #10"
 
-![Pantalla final #12](VISUAL_PROGRESS/Pixel%203%20-%20Android%2011/RESULTADO%20FINAL/12.png "Pantalla final #12")
+[Pantalla final #11]: <VISUAL_PROGRESS/Pixel%203%20-%20Android%2011/RESULTADO%20FINAL/11.png> "Pantalla final #11"
 
-![Pantalla final #13](VISUAL_PROGRESS/Pixel%203%20-%20Android%2011/RESULTADO%20FINAL/13.png "Pantalla final #13")
+[Pantalla final #12]: <VISUAL_PROGRESS/Pixel%203%20-%20Android%2011/RESULTADO%20FINAL/12.png> "Pantalla final #12"
 
-![Pantalla final #14](VISUAL_PROGRESS/Pixel%203%20-%20Android%2011/RESULTADO%20FINAL/14.png "Pantalla final #14")
+[Pantalla final #13]: <VISUAL_PROGRESS/Pixel%203%20-%20Android%2011/RESULTADO%20FINAL/13.png> "Pantalla final #13"
 
-![Pantalla final #15](VISUAL_PROGRESS/Pixel%203%20-%20Android%2011/RESULTADO%20FINAL/15.png "Pantalla final #15")
+[Pantalla final #14]: <VISUAL_PROGRESS/Pixel%203%20-%20Android%2011/RESULTADO%20FINAL/14.png> "Pantalla final #14"
 
-![Pantalla final #16](VISUAL_PROGRESS/Pixel%203%20-%20Android%2011/RESULTADO%20FINAL/16.png "Pantalla final #16")
+[Pantalla final #15]: <VISUAL_PROGRESS/Pixel%203%20-%20Android%2011/RESULTADO%20FINAL/15.png> "Pantalla final #15"
 
-![Pantalla final #17](VISUAL_PROGRESS/Pixel%203%20-%20Android%2011/RESULTADO%20FINAL/17.png "Pantalla final #17")
+[Pantalla final #16]: <VISUAL_PROGRESS/Pixel%203%20-%20Android%2011/RESULTADO%20FINAL/16.png> "Pantalla final #16"
 
-![Pantalla final #18](VISUAL_PROGRESS/Pixel%203%20-%20Android%2011/RESULTADO%20FINAL/18.png "Pantalla final #18")
+[Pantalla final #17]: <VISUAL_PROGRESS/Pixel%203%20-%20Android%2011/RESULTADO%20FINAL/17.png> "Pantalla final #17"
+
+[Pantalla final #18]: <VISUAL_PROGRESS/Pixel%203%20-%20Android%2011/RESULTADO%20FINAL/18.png> "Pantalla final #18"
 
 ## ***REPOSITORIO DEL PROYECTO DEL TUTORIAL***
 
